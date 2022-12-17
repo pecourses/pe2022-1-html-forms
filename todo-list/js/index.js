@@ -20,8 +20,7 @@ todoForm.onsubmit = e => {
   e.preventDefault();
   const todoItem = e.target.elements['todo-item'];
   if (!TODO_REX_EXP.test(todoItem.value)) {
-    const todoListItem = createTodoItem(todoItem.value);
-    todoList.append(todoListItem);
+    todoList.append(createTodoItem(todoItem.value));
     todoItem.value = '';
     todoItem.classList.remove('valid');
   } else {
@@ -34,14 +33,20 @@ function createTodoItem(value) {
 
   const delBtn = document.createElement('button');
   delBtn.textContent = 'X';
-  delBtn.onclick = e => {
-    e.target.parentElement.remove();
+  delBtn.onclick = ({ target }) => {
+    target.parentElement.remove();
+  };
+
+  const isDoneEl = document.createElement('input');
+  isDoneEl.type = 'checkbox';
+  isDoneEl.onchange = ({ target }) => {
+    target.parentElement.classList.toggle('doneTask');
   };
 
   const todoValue = document.createElement('span');
   todoValue.textContent = value;
 
-  todoListItem.append(delBtn, todoValue);
+  todoListItem.append(isDoneEl, delBtn, todoValue);
 
   return todoListItem;
 }

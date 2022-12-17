@@ -1,3 +1,7 @@
+input {
+  outline: none;
+}
+
 .valid {
   background-color: aquamarine;
 }
@@ -6,6 +10,7 @@
   background-color: lightcoral;
 }
 
-input {
-  outline: none;
+.doneTask {
+  text-decoration: 1px line-through lightgray;
+  color: grey;
 }
