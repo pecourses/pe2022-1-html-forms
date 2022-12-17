@@ -19,9 +19,9 @@
 
       <fieldset>
         <legend>String inputs</legend>
-        <!-- placeholder, pattern, minlength, maxlength -->
+        <!-- placeholder, валідація: pattern, minlength, maxlength -->
 
-        <!-- <label>
+        <label>
           Name
           <input
             type="text"
@@ -35,22 +35,22 @@
             autofocus
           />
         </label>
-        <br /> -->
-        <!-- <label>
+
+        <label>
           Email
           <input type="email" name="email" />
         </label>
-        <br />
+
         <label>
           Password
           <input type="password" name="passw" />
         </label>
-        <br />
+
         <label>
           Url
           <input type="url" name="email" />
         </label>
-        <br />
+
         <label>
           Phone
           <input
@@ -61,23 +61,23 @@
             value="+380"
           />
         </label>
-        <br />
+
         <label>
           Search
           <input type="search" name="search-string" />
-        </label> -->
+        </label>
       </fieldset>
 
       <fieldset>
         <legend>Number inputs</legend>
-        <!-- min max step -->
+        <!-- валідація: min max step -->
         <label>
           Quantity
-          <input type="number" name="quantity" min="1" max="5" step="2"
-        /></label>
+          <input type="number" name="quantity" min="1" max="5" step="2" />
+        </label>
         <label>
-          Valume <input type="range" name="volume" min="1" max="5" step="2"
-        /></label>
+          Valume <input type="range" name="volume" min="1" max="5" step="2" />
+        </label>
       </fieldset>
 
       <fieldset>
@@ -87,22 +87,22 @@
           <span>Date:</span>
           <input type="date" name="date" />
         </label>
-        <br />
+
         <label>
           <span>Datetime:</span>
           <input type="datetime-local" name="datetime" />
         </label>
-        <br />
+
         <label>
           <span>Time:</span>
           <input type="time" name="time" />
         </label>
-        <br />
+
         <label>
           <span>Month:</span>
           <input type="month" name="month" />
         </label>
-        <br />
+
         <label>
           <span>Week:</span>
           <input type="week" name="week" />
@@ -110,18 +110,15 @@
       </fieldset>
 
       <label>File(s)<input type="file" name="user-photo" multiple /></label>
-      <br />
+
       <label>Color <input type="color" name="color" /></label>
-      <br />
 
       <input type="hidden" value="Ukraine" name="country" />
-      <br />
 
       <input type="button" value="Button" />
       <input
         type="image"
-        src="https://cdn-icons-png.flaticon.com/512/660/660619.png
-"
+        src="https://cdn-icons-png.flaticon.com/512/660/660619.png"
         alt="send"
       />
       <!-- + submit, reset -->
