@@ -13,7 +13,7 @@
     <main>
       <h2>Registration Form</h2>
       <form action="">
-        <label>
+        <!-- <label>
           <span>First name</span>
           <input
             type="text"
@@ -22,6 +22,7 @@
             pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
             autofocus
             required
+            tabindex="1"
           />
         </label>
 
@@ -32,12 +33,19 @@
             name="last-name"
             placeholder="Yourlastname"
             pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+            tabindex="2"
           />
         </label>
 
         <label>
           <span>Email</span>
-          <input type="email" name="email" placeholder="your@email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email"
+            required
+            tabindex="3"
+          />
         </label>
 
         <label>
@@ -48,6 +56,7 @@
             autocomplete
             placeholder="+380991234567"
             pattern="\+380\d{9}"
+            tabindex="4"
           />
         </label>
 
@@ -58,6 +67,7 @@
             name="password"
             pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d.*)(?=.*[!@#$%^&*_].*).{8,32}"
             required
+            tabindex="5"
           />
         </label>
 
@@ -68,6 +78,66 @@
             name="password-confirmation"
             pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d.*)(?=.*[!@#$%^&*_].*).{8,32}"
             required
+            tabindex="6"
+          />
+        </label> -->
+
+        <label>
+          <span>First name</span>
+          <input
+            type="text"
+            name="first-name"
+            placeholder="Yourname"
+            autofocus
+            required
+            tabindex="1"
+          />
+        </label>
+
+        <label>
+          <span>Last name</span>
+          <input
+            type="text"
+            name="last-name"
+            placeholder="Yourlastname"
+            tabindex="2"
+          />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email"
+            required
+            tabindex="3"
+          />
+        </label>
+
+        <label>
+          <span>Phone</span>
+          <input
+            type="tel"
+            name="phone-number"
+            autocomplete
+            placeholder="+380991234567"
+            tabindex="4"
+          />
+        </label>
+
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" required tabindex="5" />
+        </label>
+
+        <label>
+          <span>Password confirmation</span>
+          <input
+            type="password"
+            name="password-confirmation"
+            required
+            tabindex="6"
           />
         </label>
 
