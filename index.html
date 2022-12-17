@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <!-- дозволяє розносити в верстці лейбл і інпут -->
+      <!-- <label for="first-name">Name</label>
+      <input id="first-name" name="first-name"  /> -->
+
+      <!-- <label>
+        Name
+        <input name="first-name" />
+      </label> -->
+
+      <fieldset>
+        <legend>String inputs</legend>
+        <!-- placeholder, pattern, minlength, maxlength -->
+
+        <!-- <label>
+          Name
+          <input
+            type="text"
+            name="first-name"
+            placeholder="Yourname"
+            minlength="2"
+            maxlength="20"
+            pattern="[A-Z][a-z]{1,19}"
+            value=""
+            required
+            autofocus
+          />
+        </label>
+        <br /> -->
+        <!-- <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+        <br />
+        <label>
+          Password
+          <input type="password" name="passw" />
+        </label>
+        <br />
+        <label>
+          Url
+          <input type="url" name="email" />
+        </label>
+        <br />
+        <label>
+          Phone
+          <input
+            type="tel"
+            name="tel-number"
+            autocomplete
+            placeholder="+380123456789"
+            value="+380"
+          />
+        </label>
+        <br />
+        <label>
+          Search
+          <input type="search" name="search-string" />
+        </label> -->
+      </fieldset>
+
+      <fieldset>
+        <legend>Number inputs</legend>
+        <!-- min max step -->
+        <label>
+          Quantity
+          <input type="number" name="quantity" min="1" max="5" step="2"
+        /></label>
+        <label>
+          Valume <input type="range" name="volume" min="1" max="5" step="2"
+        /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Data inputs</legend>
+        <!-- min max step -->
+        <label>
+          <span>Date:</span>
+          <input type="date" name="date" />
+        </label>
+        <br />
+        <label>
+          <span>Datetime:</span>
+          <input type="datetime-local" name="datetime" />
+        </label>
+        <br />
+        <label>
+          <span>Time:</span>
+          <input type="time" name="time" />
+        </label>
+        <br />
+        <label>
+          <span>Month:</span>
+          <input type="month" name="month" />
+        </label>
+        <br />
+        <label>
+          <span>Week:</span>
+          <input type="week" name="week" />
+        </label>
+      </fieldset>
+
+      <label>File(s)<input type="file" name="user-photo" multiple /></label>
+      <br />
+      <label>Color <input type="color" name="color" /></label>
+      <br />
+
+      <input type="hidden" value="Ukraine" name="country" />
+      <br />
+
+      <input type="button" value="Button" />
+      <input
+        type="image"
+        src="https://cdn-icons-png.flaticon.com/512/660/660619.png
+"
+        alt="send"
+      />
+      <!-- + submit, reset -->
+
+      <fieldset>
+        <legend>Gender:</legend>
+        <label><input name="gender" type="radio" value="Male" />Male</label>
+        <label><input name="gender" type="radio" value="Female" />Female</label>
+        <label
+          ><input name="gender" type="radio" value="Other" checked />Other
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Prefs:</legend>
+        <label><input type="checkbox" name="prefs" value="pets" /> Pets</label>
+        <label><input type="checkbox" name="prefs" value="cars" /> Cars</label>
+        <label><input type="checkbox" name="prefs" value="tech" /> Tech</label>
+      </fieldset>
+
+      <!-- select, textarea -->
+
+      <button type="submit">Send</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
