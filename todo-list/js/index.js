@@ -30,6 +30,7 @@ todoForm.onsubmit = e => {
 
 function createTodoItem(value) {
   const todoListItem = document.createElement('li');
+  todoListItem.classList.add('todoListItem');
 
   const delBtn = document.createElement('button');
   delBtn.textContent = 'X';
@@ -40,13 +41,13 @@ function createTodoItem(value) {
   const isDoneEl = document.createElement('input');
   isDoneEl.type = 'checkbox';
   isDoneEl.onchange = ({ target }) => {
-    target.parentElement.classList.toggle('doneTask');
+    target.nextSibling.classList.toggle('doneTask');
   };
 
   const todoValue = document.createElement('span');
   todoValue.textContent = value;
 
-  todoListItem.append(isDoneEl, delBtn, todoValue);
+  todoListItem.append(isDoneEl, todoValue, delBtn);
 
   return todoListItem;
 }
