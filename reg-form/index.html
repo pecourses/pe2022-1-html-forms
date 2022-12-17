@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body>
+    <main>
+      <h2>Registration Form</h2>
+      <form action="">
+        <label>
+          <span>First name</span>
+          <input
+            type="text"
+            name="first-name"
+            placeholder="Yourname"
+            pattern="[A-Z][a-z]{2-19}(-[A-Z][a-z]{2,19})?"
+            autofocus
+            required
+          />
+        </label>
+
+        <label>
+          <span>Last name</span>
+          <input
+            type="text"
+            name="last-name"
+            placeholder="Yourlastname"
+            pattern="[A-Z][a-z]{2-19}(-[A-Z][a-z]{2,19})?"
+          />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="your@email" required />
+        </label>
+
+        <label>
+          <span>Phone</span>
+          <input
+            type="tel"
+            name="phone-number"
+            autocomplete
+            placeholder="+380991234567"
+            pattern="\+380\d{9}"
+          />
+        </label>
+
+        <label>
+          <span>Password</span>
+          <input
+            type="password"
+            name="password"
+            pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d.*)(?=.*[!@#$%^&*_].*).{8,32}"
+            required
+          />
+        </label>
+
+        <label>
+          <span>Password confirmation</span>
+          <input
+            type="password"
+            name="password-confirmation"
+            pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d.*)(?=.*[!@#$%^&*_].*).{8,32}"
+            required
+          />
+        </label>
+
+        <button type="submit">Register</button>
+      </form>
+    </main>
+  </body>
+</html>
